@@ -1,0 +1,39 @@
+.recipes-list__title {
+  margin: $l-size 0;
+  font-size: $l-size;
+  color: $text-color;
+  text-align: center;
+}
+
+.recipes-list__wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.recipes-list__recipe {
+  position: relative;
+  margin: $xs-size auto;
+  width: 48rem;
+  box-shadow: 0 .2rem .8rem $shadow-color;
+
+  a {
+    display: block;
+  }
+}
+
+.recipes-list__recipe-title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: $m-size $s-size;
+  font-size: 2rem;
+  color: $accent-color;
+  background: white;
+}
+
+.recipes-list__recipe-img {
+  width: 100%;
+}

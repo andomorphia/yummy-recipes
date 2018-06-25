@@ -1,0 +1,130 @@
+.recipe__header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: $l-size;
+}
+
+.recipe__title {
+  margin-top: $m-size;
+  font-size: $l-size;
+  text-align: center;
+}
+
+.recipe__img {
+  max-width: 100%;
+  box-shadow: 0 .2rem .8rem $shadow-color;
+}
+
+.recipe__info {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  box-shadow: 0 .2rem .8rem $shadow-color;
+}
+
+.recipe__info-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: $s-size;
+  width: 50%;
+  font-size: $s-size;
+  background: $white;
+  border-top: 1px solid $border-color;
+
+  &:first-child {
+    border: none;
+  }
+}
+
+.recipe__info-item-label {
+  padding-bottom: .32rem;
+  font-size: $xs-size;
+  color: lighten($text-color, 35%);
+  text-transform: uppercase;
+}
+
+.recipe__info-item-icon {
+  margin-right: $xs-size;
+  font-size: $m-size;
+}
+
+.recipe__content {
+  margin-bottom: $l-size;
+}
+
+.recipe__content-title {
+  font-size: $m-size;
+  color: $accent-color;
+  text-align: center;
+}
+
+.recipe__step,
+.recipe__ingredient {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: $s-size;
+  line-height: 1.5;
+  font-size: $s-size;
+  background: $white;
+  border-top: 1px solid $border-color;
+
+  &:first-child {
+    border: none;
+  }
+}
+
+.recipe__step-num {
+  padding-right: $m-size;
+  font-family: 'Changa One', cursive;
+  font-size: $l-size;
+  color: $accent-color;
+}
+
+// Desktop and up styles
+@media (min-width: $desktop-breakpoint) {
+  .recipe__title {
+    margin-top: $l-size;
+    font-size: $xl-size;
+  }
+
+  .recipe__img {
+    max-height: 33.175rem;
+  }  
+
+  .recipe__info {
+    display: block;
+    width: auto;
+  }
+
+  .recipe__info-item {
+    padding: $m-size;
+    width: auto;
+  }
+  
+  .recipe__info-item-icon {
+    margin-right: $s-size;
+    font-size: $l-size;
+  }
+
+  .recipe__content {
+    display: flex;
+  }
+
+  .recipe__content-title {
+    font-size: $m-size;
+    text-align: center;
+  }
+
+  .recipe__steps {
+    margin-left: $l-size;
+    width: 65%;
+  }
+
+  .recipe__ingredients {
+    width: 35%;
+  }
+}

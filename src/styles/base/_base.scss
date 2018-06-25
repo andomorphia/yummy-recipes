@@ -1,0 +1,91 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $m-size;
+  background: $body-bg-color;
+}
+
+section {
+  padding: $l-size $l-size $xl-size;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 108rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+.btn--back {
+  display: block;
+  margin: 0 auto;
+  padding: $xs-size;
+  width: 16rem;
+  font-size: $s-size;
+  color: $accent-color;
+  text-align: center;
+  text-decoration: none;
+  background: $white;
+  border-radius: .6rem;
+  box-shadow: 0 .2rem .8rem $shadow-color;
+}
+
+.btn--back-icon {
+  margin-right: $xs-size;
+}
+
+// Loading spinner animation
+.spinner {
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+  
+  & .path {
+    stroke: $accent-color;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+  }
+  
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}

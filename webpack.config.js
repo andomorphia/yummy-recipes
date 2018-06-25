@@ -1,5 +1,6 @@
 /* eslint-disable */
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/app.js',
@@ -24,6 +25,12 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new CopyWebpackPlugin([
+      { from: './src/assets/index.html' },
+      { from: './src/assets/images/favicon.png' },
+    ]),
+  ],
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'public'),

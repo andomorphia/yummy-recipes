@@ -20,6 +20,7 @@ section {
 
 .container {
   margin: 0 auto;
+  padding-top: 6.8rem; // Header height
   max-width: 108rem;
 }
 
@@ -88,4 +89,16 @@ h6 {
     stroke-dasharray: 90, 150;
     stroke-dashoffset: -124;
   }
+}
+
+// Fading transition
+.fade-enter {
+  opacity: 0;
+  transform: translateY(-2rem);
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: all 250ms ease-in-out;
+  transform: translateY(0);
 }

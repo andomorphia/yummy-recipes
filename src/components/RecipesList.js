@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import { Fade, Stagger } from 'react-animation-components';
 
 import Spinner from './Spinner';
 import { getRecipeUrl } from '../utils/url';
@@ -8,13 +9,17 @@ import { getRecipeUrl } from '../utils/url';
 const RecipesList = ({ recipes, loaded }) => (
   <section className="recipes-list">
     <h1 className="recipes-list__title">What do you fancy eating today?</h1>
-    <div className="recipes-list__wrapper">
-      {/* Display loading anim if recipes are not fetched yet */}
-      {!loaded ? (
-        <Spinner />
-      ) : (
-        recipes.map(recipe => (
-          <div
+    {/* Display loading anim if recipes are not fetched yet */}
+    {!loaded ? (
+      <Spinner />
+    ) : (
+      <Stagger
+        in
+        delay={50}
+        className="recipes-list__wrapper"
+      >
+        {recipes.map(recipe => (
+          <Fade
             key={recipe.title}
             className="recipes-list__recipe"
           >
@@ -25,10 +30,10 @@ const RecipesList = ({ recipes, loaded }) => (
               <h3 className="recipes-list__recipe-title">{recipe.title}</h3>
               <img className="recipes-list__recipe-img" src={recipe.image} alt={recipe.title} />
             </NavLink>
-          </div>
-        ))
-      )}
-    </div>
+          </Fade>
+        ))}
+      </Stagger>
+    )}
   </section>
 );
 

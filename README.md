@@ -8,11 +8,11 @@ A simple demo project about food 🍲 to play with React/React-Router/Redux/Webp
 + Webpack
 
 ## Fun things to do soon:
-+ Get more data (more recipes) to play with pagination
-+ Test some animations/transitions here and there
++ Get more data (more recipes) to play with pagination and/or lazy loading
++ --Test some animations/transitions here and there--
 + Do some testing with Jest
 + Set up a proper production build
-+ More things I can't think about right know
++ More things I can't think about right know 🤔
 
 ## How to use:
 + `npm install` or `yarn`
